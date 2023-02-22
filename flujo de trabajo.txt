@@ -1,0 +1,12 @@
+detalles de la aplicacion
+- la aplicacion es un portal de empleo para mujeres y empresas
+- las mujeres y empresas podran registrarse en la app por medio de correo, google o facebook
+- las mujeres podran ver las ofertas de empleo de las empresas
+- cada oferta de empleo tendra un titulo, descripcion, ubicacion y un boton para que las mujeres puedan postular
+- cuando postulan al trabajo podran escribirle directamente al creador del empleo por medio de un chat
+- las mujeren tambien tendran un perfil en el que podran describirse y comunicar su experiencia laboral
+- si una emrpresa y una mujer se ponden de acuerdo para un trabajo, al finalizar este ambos podran escribir una reseña de como fue trabajar con el otro
+- la reseña aparecera en su perfil publico
+- tanto las empresas como las mujeres tienen un perfil publico
+- en el perfil publico de las mujeres aparecera su descripcion, foto, experiencia, trabajos que ha tomado en la aplicacion con su respentiva reseña por parte del empleaodr
+- en el perfil publico de la empresa aparecera su nombre, a que se dedica, ubicacion, trabajos publicados y reseñas de las mujeres que han tomado lo trabajos anteriormente publicados

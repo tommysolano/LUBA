@@ -1,6 +1,8 @@
 const express = require("express")
 const cors = require("cors")
 const mongoose = require("mongoose")
+const authRoutes = require("./routes/AuthRoutes")
+const cookieParser = require("cookie-parser")
 
 const app = express();
 
@@ -23,4 +25,6 @@ app.use(cors({
     credentials: true,
 }))
 
+app.use(cookieParser())
 app.use(express.json())
+app.use("/", authRoutes)

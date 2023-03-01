@@ -16,7 +16,17 @@ function Register() {
         try {
             const {data} = await axios.post("http://localhost:4000/register", {
                 ...values,
-            } )
+            },{
+                withCredentials: true,
+            })
+            console.log(data)
+            if (data) {
+                if (data.errors) {
+
+                } else {
+
+                }
+            }
         } catch (err) {
             console.log(err)
         }
@@ -38,10 +48,10 @@ function Register() {
                 />
             </div>
             <div>
-                <label htmlFor="Password">Password</label>
+                <label htmlFor="password">Password</label>
                 <input 
-                    type="Password" 
-                    name="Password" 
+                    type="password" 
+                    name="password" 
                     placeholder="Password" 
                     onChange={(e) => 
                         setValues({...values, [e.target.name]: e.target.value})

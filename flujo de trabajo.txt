@@ -10,3 +10,7 @@ detalles de la aplicacion
 - tanto las empresas como las mujeres tienen un perfil publico
 - en el perfil publico de las mujeres aparecera su descripcion, foto, experiencia, trabajos que ha tomado en la aplicacion con su respentiva reseña por parte del empleaodr
 - en el perfil publico de la empresa aparecera su nombre, a que se dedica, ubicacion, trabajos publicados y reseñas de las mujeres que han tomado lo trabajos anteriormente publicados
+
+
+las mujeres podran registrarse, demostrar sus skills, veran ofertas de trabajos de las empresas, podran obtener nuevas skills gracias a cursos de fundaciones
+junto a su certificado

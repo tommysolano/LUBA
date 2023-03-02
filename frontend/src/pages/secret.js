@@ -1,10 +1,21 @@
 import React from "react"
+import { useNavigate } from "react-router-dom"
 
 
-function Secret() {
+
+export default function Secret() {
+
+  const navigate = useNavigate()
+
+  const logOut = () => {
+    navigate("/login")
+  }
+
   return (
-    <div>Secret</div>
+    <div>
+      <h1>Secret</h1>
+      <button onClick={logOut} >Log out</button>
+    </div>
   );
 }
 
-export default Secret;

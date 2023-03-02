@@ -1,14 +1,20 @@
 import React, {useState} from "react"
-import {Link} from "react-router-dom"
-import {ToastContainer,Toast} from "react-toastify"
+import {Link, useNavigate} from "react-router-dom"
+import {ToastContainer,toast} from "react-toastify"
 import axios from "axios"
 
 
 function Login() {
 
+    const navigate = useNavigate()
+
     const [values, setValues] = useState({
         email: "",
         password: ""
+    })
+
+    const generateError = (err) => toast.error(err, {
+        position: "bottom-right",
     })
 
     const handleSubmit = async (e) => {
@@ -16,7 +22,19 @@ function Login() {
         try {
             const {data} = await axios.post("http://localhost:4000/login", {
                 ...values,
-            } )
+            },{
+                withCredentials: true,
+            })
+            
+            if (data) {
+                if (data.errors) {
+                    const {email, password} = data.errors
+                    if (email) generateError(email)
+                    else if (password) generateError(password)
+                } else {
+                    navigate("/")
+                }
+            }
         } catch (err) {
             console.log(err)
         }
@@ -38,11 +56,11 @@ function Login() {
                 />
             </div>
             <div>
-                <label htmlFor="Password">Password</label>
+                <label htmlFor="password">Password</label>
                 <input 
-                    type="Password" 
-                    name="Password" 
-                    placeholder="Password" 
+                    type="password" 
+                    name="password" 
+                    placeholder="password" 
                     onChange={(e) => 
                         setValues({...values, [e.target.name]: e.target.value})
                     }
